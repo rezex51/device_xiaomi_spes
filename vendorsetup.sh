@@ -6,11 +6,6 @@ end="\033[0m"
 echo -e "${color}Applying patches${end}"
 sleep 1
 
-# Remove pixel headers to avoid conflicts
-rm -rf hardware/google/pixel/kernel_headers/Android.bp
-
-# Remove hardware/lineage/compat to avoid conflicts
-rm -rf hardware/lineage/compat/Android.bp
 
 # Kernel & Vendor Sources
 git clone https://github.com/sayann70/vendor_xiaomi_spes -b 15 vendor/xiaomi/spes
